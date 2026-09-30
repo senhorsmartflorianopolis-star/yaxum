@@ -1,5 +1,4 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
-<title>YAXUM</title>
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Yaxum — Gestão para assistência técnica</title><meta name="description" content="Ordens de serviço, bancada ao vivo, WhatsApp com IA, estoque, caixa e relacionamento com clientes em um sistema criado dentro de uma assistência técnica."><meta name="theme-color" content="#04050C"><meta name="robots" content="index,follow"><link rel="canonical" href="https://yaxum.com.br/"><link rel="icon" type="image/png" href="yaxum-logo-nav.png"><meta property="og:type" content="website"><meta property="og:locale" content="pt_BR"><meta property="og:site_name" content="Yaxum"><meta property="og:title" content="Yaxum — Gestão para assistência técnica"><meta property="og:description" content="O cliente acompanha o conserto. O WhatsApp atende, orça e vende. A sua assistência controla tudo em um só lugar."><meta property="og:url" content="https://yaxum.com.br/"><meta property="og:image" content="https://yaxum.com.br/yaxum-logo.jpg"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Chakra+Petch:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap">
@@ -110,6 +109,12 @@ h3{font-family:var(--display);font-weight:600;font-size:20px;line-height:1.2;let
 .nav-lab{gap:8px}
 @media (max-width:1320px){.nav-lab span{display:none}.nav-lab{padding:9px 11px}}
 @media (max-width:980px){.nav-links{display:none}.nav .nav-cta{margin-left:auto}}
+@media (max-width:560px){
+  .nav-in{height:62px;gap:10px}
+  .brand-logo{height:38px;max-width:132px}
+  .nav-lab{display:none}
+  .nav-cta .btn{padding:10px 12px;font-size:11.5px;letter-spacing:.045em;white-space:nowrap}
+}
 
 /* ---------- glass panel ---------- */
 .glass{
@@ -144,7 +149,16 @@ h3{font-family:var(--display);font-weight:600;font-size:20px;line-height:1.2;let
 .hud dt{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--cyan)}
 .hud dd{margin:5px 0 0;font-size:15px;line-height:1.3;font-weight:600;color:var(--ink)}
 @media (max-width:1020px){.hero{grid-template-columns:1fr}}
-@media (max-width:560px){.hud{grid-template-columns:1fr}}
+@media (max-width:560px){
+  .shell,.hero,.hero-copy,.read,.sec-head{min-width:0;max-width:100%}
+  .hero{padding-top:38px}
+  .hero-copy{gap:20px}
+  .hero h1{font-size:clamp(34px,10.4vw,46px);overflow-wrap:anywhere}
+  .tag{max-width:100%;flex-wrap:wrap;row-gap:3px;font-size:10.5px;letter-spacing:.09em}
+  .hero-actions{display:grid;justify-items:start}
+  .hud{grid-template-columns:1fr}
+  .offer{max-width:100%;flex-wrap:wrap}
+}
 
 /* glitch headline */
 .glitch{position:relative}
@@ -257,7 +271,7 @@ h3{font-family:var(--display);font-weight:600;font-size:20px;line-height:1.2;let
 .chip-c{right:10px;top:40px;transform:translateZ(40px)}
 @media (max-width:1180px) and (min-width:1021px){.chip-a,.chip-b{left:-40px}}
 @media (max-width:620px){
-  .stage{height:610px;perspective:1100px}
+  .stage{height:610px;perspective:1100px;overflow:clip}
   .floaty{left:50%;transform:translateZ(40px) scale(.92);transform-origin:50% 0}
   .holo.ticket{right:-30px;top:250px;transform:translateZ(-120px) rotateY(10deg) scale(.85)}
   .chip-a{left:50%;margin-left:-118px;top:556px}
@@ -526,10 +540,12 @@ html.explorar #space{pointer-events:auto;cursor:grab;touch-action:none}
 .ex-pad{display:none;grid-template-columns:repeat(3,52px);gap:6px}
 .ex-pad button{width:52px;height:52px;background:rgba(4,5,12,.88);border:1px solid var(--line-2);color:var(--cyan);font-size:18px;touch-action:none;cursor:pointer}
 .ex-pad button:active{background:rgba(0,240,255,.2)}
-.ex-card{position:fixed;z-index:51;left:0;top:0;width:min(410px,calc(100vw - 2 * var(--gutter)));padding:20px 24px 26px 30px;will-change:transform;
-  background:radial-gradient(ellipse 72% 70% at 42% 48%,rgba(3,4,10,.8),rgba(3,4,10,.55) 55%,rgba(3,4,10,0) 80%);
-  text-shadow:0 0 12px rgba(0,0,0,.95),0 0 3px rgba(0,0,0,.95)}
-.ex-txt{display:grid;gap:7px}
+.ex-card{position:fixed;z-index:51;left:0;top:0;width:min(430px,calc(100vw - 2 * var(--gutter)));padding:22px 28px 28px 30px;will-change:transform;isolation:isolate;border:1px solid rgba(101,240,255,.48);border-radius:4px;background:linear-gradient(145deg,rgba(4,17,31,.94),rgba(5,8,20,.88) 58%,rgba(20,5,31,.9));box-shadow:0 18px 70px rgba(0,0,0,.56),0 0 0 1px rgba(0,240,255,.08) inset,0 0 30px rgba(0,240,255,.16),-10px 8px 36px rgba(255,43,214,.12);-webkit-backdrop-filter:blur(18px) saturate(1.3);backdrop-filter:blur(18px) saturate(1.3);text-shadow:0 0 12px rgba(0,0,0,.95),0 0 3px rgba(0,0,0,.95)}
+.ex-card::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:.32;background:repeating-linear-gradient(180deg,transparent 0 5px,rgba(0,240,255,.055) 6px,transparent 7px),linear-gradient(90deg,rgba(0,240,255,.09),transparent 35%,rgba(255,43,214,.08))}
+.ex-card::after{content:"";position:absolute;inset:8px;z-index:-1;pointer-events:none;border:1px solid rgba(255,255,255,.055)}
+.ex-txt{display:grid;gap:8px}
+.ex-close{position:absolute;z-index:3;top:12px;right:12px;width:34px;height:34px;display:grid;place-items:center;padding:0;border:1px solid rgba(101,240,255,.36);border-radius:50%;background:rgba(3,8,18,.78);color:#eafcff;font:400 22px/1 var(--body);cursor:pointer;box-shadow:0 0 18px rgba(0,240,255,.12);transition:background .2s ease,border-color .2s ease,transform .2s ease}
+.ex-close:hover,.ex-close:focus-visible{background:rgba(0,240,255,.16);border-color:var(--cyan);transform:scale(1.06);outline:none}
 .ex-hole{position:absolute;left:10px;top:18px;width:38px;height:38px;margin:-19px 0 0 -19px;border-radius:50%;pointer-events:none;
   background:radial-gradient(circle,#000 0 40%,rgba(0,0,0,0) 43%),conic-gradient(from 0deg,var(--magenta),var(--cyan),#fff,var(--yellow),var(--magenta));
   -webkit-mask:radial-gradient(circle,#000 0 58%,transparent 70%);mask:radial-gradient(circle,#000 0 58%,transparent 70%);
@@ -538,12 +554,13 @@ html.explorar #space{pointer-events:auto;cursor:grab;touch-action:none}
 @keyframes holeIn{from{transform:scale(0)}to{transform:scale(1.35)}}
 @keyframes holeSpin{to{rotate:360deg}}
 @keyframes holeRest{to{transform:scale(.55);opacity:.8}}
-.ex-code{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--magenta);padding-left:26px}
+.ex-code{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--magenta);padding:1px 42px 7px 26px;border-bottom:1px solid rgba(101,240,255,.16)}
 .ex-card h3{font-size:clamp(26px,2.4vw,34px);color:#fff;letter-spacing:.02em;line-height:1.05;text-shadow:0 0 18px rgba(0,240,255,.55),0 0 3px #000}
 .ex-desc{font-size:15.5px;color:#e6eeff}
 .ex-sub{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--cyan);margin-top:6px}
-.ex-eq{font-size:13.5px;color:var(--ink);line-height:1.6}
-.ex-eq .sep{color:var(--magenta);margin:0 4px}
+.ex-eq{display:flex;flex-wrap:wrap;gap:6px;font-size:12.5px;color:var(--ink);line-height:1.35}
+.ex-eq .wd{padding:4px 7px;border:1px solid rgba(101,240,255,.2);background:rgba(0,240,255,.055)}
+.ex-eq .sep{display:none}
 .ex-yx{list-style:none;margin:0;padding:0;display:grid;gap:7px}
 .ex-yx li{display:grid;grid-template-columns:12px 1fr;gap:9px;font-size:14px;line-height:1.45;color:#dfe8ff}
 .ex-yx li::before{content:"";width:7px;height:7px;margin-top:6px;background:var(--cyan);box-shadow:0 0 8px var(--cyan);transform:rotate(45deg)}
@@ -561,9 +578,9 @@ html.explorar #space{pointer-events:auto;cursor:grab;touch-action:none}
 .ex-card.sai .ex-hole{animation:holeOut .45s ease-in both}
 @keyframes holeOut{from{transform:scale(.8)}50%{transform:scale(1.4)}to{transform:scale(0);opacity:0}}
 @media (max-width:700px){
-  .ex-card{transform:none!important;top:calc(184px + env(safe-area-inset-top,0px));left:var(--gutter);right:var(--gutter);width:auto;max-height:max(190px,calc(100vh - 520px));overflow:auto;padding:14px 16px 18px 26px;
-    background:radial-gradient(ellipse 90% 80% at 45% 45%,rgba(3,4,10,.86),rgba(3,4,10,.6) 60%,rgba(3,4,10,0) 90%)}
+  .ex-card{transform:none!important;top:calc(184px + env(safe-area-inset-top,0px));left:var(--gutter);right:var(--gutter);width:auto;max-height:max(210px,calc(100vh - 500px));overflow:auto;padding:18px 18px 20px 24px}
   .ex-card h3{font-size:24px}
+  .ex-close{position:sticky;float:right;top:0;margin:0 0 -34px auto}
 }
 @media (prefers-reduced-motion:reduce){.ex-card .ch,.ex-card .wd{opacity:1}}
 @media (pointer:coarse){.ex-pad{display:grid}.ex-help .k-desk{display:none}.ex-help .k-touch{display:inline}}
@@ -670,7 +687,38 @@ input[type=range]:focus-visible{outline:2px solid var(--yellow);outline-offset:8
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
 }
+
+/* ---------- acabamento responsivo para celulares ---------- */
+@media (max-width:560px){
+  body{font-size:16.5px}
+  .section{padding-block:64px}
+  .nav-in{min-width:0}
+  .brand{min-width:0;min-height:44px}
+  .brand-logo{width:auto;height:auto;max-width:108px}
+  .nav-cta .btn{min-height:44px}
+  .glitch .gl{display:none}
+  .hero h1{font-size:clamp(34px,10.8vw,42px);line-height:1.02;overflow-wrap:normal}
+  .sec-head{gap:14px}
+  .read{padding:20px}
+  .seg-pick button{min-height:48px}
+  input[type=range]{height:48px;margin:0;background:linear-gradient(90deg,var(--cyan),var(--magenta)) center/100% 6px no-repeat}
+  .price{font-size:46px}
+  .foot{align-items:flex-start;flex-direction:column}
+}
+@media (max-width:420px){
+  .hero-actions{width:100%;grid-template-columns:1fr;justify-items:stretch}
+  .hero-actions .btn,.cta .btn{width:100%;min-height:52px}
+  .calc{padding:18px 16px}
+}
+@media (max-width:350px){
+  :root{--gutter:14px}
+  .mods{grid-template-columns:1fr}
+  .mod{padding:17px 16px 19px}
+  .mod p{font-size:14.5px}
+  .mod-id{display:inline}
+}
 </style>
+</head><body>
 <canvas id="space" aria-hidden="true"></canvas>
 <div class="ex-hud" id="exHud" hidden>
   <div class="ex-top">
@@ -678,6 +726,7 @@ input[type=range]:focus-visible{outline:2px solid var(--yellow);outline-offset:8
     <button class="btn btn-sm" type="button" id="exSair">Voltar para a página</button>
   </div>
   <aside class="ex-card" id="exCard" hidden aria-live="polite">
+    <button class="ex-close" id="exClose" type="button" aria-label="Fechar informações da bancada" title="Fechar">×</button>
     <span class="ex-hole" aria-hidden="true"></span>
     <div class="ex-txt">
       <p class="ex-code" id="exCode"></p>
@@ -704,7 +753,7 @@ input[type=range]:focus-visible{outline:2px solid var(--yellow);outline-offset:8
 
 <header class="nav">
   <div class="nav-in">
-    <a class="brand" href="#top" aria-label="YAXUM, voltar ao início"><img class="brand-logo" src="yaxum-logo-nav.png" alt="YAXUM" width="460" height="203"></a>
+    <a class="brand" href="#top" aria-label="YAXUM, voltar ao início"><img class="brand-logo" src="yaxum-logo-nav.png?v=2" alt="YAXUM" width="568" height="200"></a>
     <nav class="nav-links" aria-label="Seções">
       <a href="#bancada">Bancada ao vivo</a>
       <a href="#whatsapp">WhatsApp com IA</a>
@@ -767,7 +816,7 @@ input[type=range]:focus-visible{outline:2px solid var(--yellow);outline-offset:8
             <dt>Garantia</dt><dd>90 dias</dd>
           </dl>
           <hr>
-          <div class="t-qr"><canvas id="qr" width="25" height="25"></canvas><p>Acompanhe ao vivo<br><b>yaxum.app/os/4821</b></p></div>
+          <div class="t-qr"><canvas id="qr" width="25" height="25"></canvas><p>Acompanhe ao vivo<br><b>sualoja.yaxum.com.br/os/4821</b></p></div>
         </div>
 
         <div class="floaty" aria-hidden="true">
@@ -777,7 +826,7 @@ input[type=range]:focus-visible{outline:2px solid var(--yellow);outline-offset:8
                 <div class="sb"><span>14:36</span><span class="sb-bat"></span></div>
                 <div class="url">
                   <svg width="10" height="12" viewBox="0 0 10 12"><rect x="1" y="5" width="8" height="6.2" rx="1.4" fill="currentColor"/><path d="M3 5V3.6a2 2 0 0 1 4 0V5" fill="none" stroke="currentColor" stroke-width="1.3"/></svg>
-                  yaxum.app/os/4821
+                  sualoja.yaxum.com.br/os/4821
                 </div>
                 <div>
                   <p class="os-store">Fix Point Celulares · Ordem de Serviço</p>
@@ -927,7 +976,7 @@ input[type=range]:focus-visible{outline:2px solid var(--yellow);outline-offset:8
         </div>
         <div class="msgs">
           <p class="msg in">boa tarde, meu iphone já ficou pronto?<time>14:31</time></p>
-          <p class="msg out">Oi, Juliana! Está em reparo, com previsão para hoje às 17h. Dá pra assistir ao vivo: yaxum.app/os/4821<time>14:31 · IA</time></p>
+          <p class="msg out">Oi, Juliana! Está em reparo, com previsão para hoje às 17h. Dá pra assistir ao vivo: sualoja.yaxum.com.br/os/4821<time>14:31 · IA</time></p>
           <p class="msg in">que legal kkk vcs tem película pra ele?<time>14:33</time></p>
           <div class="msg out media">
             <svg viewBox="0 0 240 140" aria-hidden="true">
@@ -1365,7 +1414,7 @@ input[type=range]:focus-visible{outline:2px solid var(--yellow);outline-offset:8
 </main>
 
 <footer class="foot" id="rodape">
-  <a class="brand" href="#top" aria-label="YAXUM, voltar ao início"><img class="brand-logo" src="yaxum-logo-nav.png" alt="YAXUM" width="460" height="203"></a>
+  <a class="brand" href="#top" aria-label="YAXUM, voltar ao início"><img class="brand-logo" src="yaxum-logo-nav.png?v=2" alt="YAXUM" width="568" height="200"></a>
   <p>Sistema para assistência técnica · feito em Florianópolis</p>
   <p class="mono tnum" style="font-size:12px">WhatsApp (48) 99203-7431 · © 2026 YAXUM</p>
 </footer>
@@ -1886,14 +1935,38 @@ input[type=range]:focus-visible{outline:2px solid var(--yellow);outline-offset:8
     benchZ.forEach(function(z, k){ box(k % 2 ? crossM : crossC, 460, 1.4, 1.4, 0, 322, z - SP / 2); });
     pln(M.wall, 820, 360, 0, 180, backZ, scene);
     var logoMat = new T.MeshBasicMaterial({ color: 0x0b0e1a });
-    new T.TextureLoader().load("yaxum-logo.jpg", function(t){ t.anisotropy = 4; logoMat.map = t; logoMat.color.set(0xffffff); logoMat.needsUpdate = true; });
+    new T.TextureLoader().load("yaxum-logo.jpg?v=2", function(t){ t.anisotropy = 4; logoMat.map = t; logoMat.color.set(0xffffff); logoMat.needsUpdate = true; });
     function poster(x, z, size, ry){
       var m = new T.Mesh(GP, logoMat); m.scale.set(size, size, 1); m.position.set(x, 176, z); m.rotation.y = ry; scene.add(m);
       var h = size / 2 + 4, fr = new T.Group(); fr.position.set(x, 176, z); fr.rotation.y = ry; scene.add(fr);
       box(M.cyan, size + 10, 2, 2, 0, h, 1, fr); box(M.magenta, size + 10, 2, 2, 0, -h, 1, fr);
       box(M.cyan, 2, size + 10, 2, -h, 0, 1, fr); box(M.magenta, 2, size + 10, 2, h, 0, 1, fr);
     }
-    poster(0, backZ + 2, 290, 0);
+    /* Marca final suspensa: camadas dão profundidade e as partículas seguem o azul do Y. */
+    var endLogo = new T.Group(); endLogo.position.set(0, 176, backZ + 38); scene.add(endLogo);
+    var endLogoMats = [], endLogoMain = new T.MeshBasicMaterial({ color: 0xffffff, transparent: true, opacity: .98, depthWrite: false, alphaTest: .02 });
+    for (var ld = 0; ld < 7; ld++) {
+      var lm = new T.MeshBasicMaterial({ color: ld < 3 ? 0x087fa8 : 0x00d9ff, transparent: true, opacity: .11 + ld * .018, depthWrite: false, blending: T.AdditiveBlending, alphaTest: .015 });
+      endLogoMats.push(lm);
+      var layer = new T.Mesh(GP, lm); layer.scale.set(330 + ld * 1.4, 116 + ld * .5, 1); layer.position.z = -14 + ld * 2; endLogo.add(layer);
+    }
+    var logoFace = new T.Mesh(GP, endLogoMain); logoFace.scale.set(330, 116, 1); logoFace.position.z = 2; endLogo.add(logoFace);
+    new T.TextureLoader().load("yaxum-logo-nav.png?v=3", function(t){
+      t.anisotropy = 4; endLogoMain.map = t; endLogoMain.needsUpdate = true;
+      endLogoMats.forEach(function(m){ m.map = t; m.needsUpdate = true; });
+    });
+    var halo = new T.Mesh(new T.RingGeometry(170, 172, low ? 48 : 80), new T.MeshBasicMaterial({ color: 0x00eaff, transparent: true, opacity: .24, depthWrite: false, blending: T.AdditiveBlending, side: T.DoubleSide }));
+    halo.scale.y = .45; halo.position.z = -18; endLogo.add(halo);
+    var NLP = low ? 120 : 300, lpp = new Float32Array(NLP * 3);
+    for (var lp = 0; lp < NLP; lp++) {
+      var la = rnd() * Math.PI * 2, lr = .68 + rnd() * .48;
+      lpp[lp * 3] = Math.cos(la) * 190 * lr;
+      lpp[lp * 3 + 1] = Math.sin(la) * 88 * lr;
+      lpp[lp * 3 + 2] = (rnd() - .5) * 95;
+    }
+    var lpg = new T.BufferGeometry(); lpg.setAttribute("position", new T.BufferAttribute(lpp, 3));
+    var logoParticleMat = new T.PointsMaterial({ color: 0x1edfff, size: low ? 2.4 : 3.2, transparent: true, opacity: .78, depthWrite: false, blending: T.AdditiveBlending });
+    var endLogoParticles = new T.Points(lpg, logoParticleMat); endLogo.add(endLogoParticles);
     poster(0, zF - 2, 290, Math.PI);
 
     /* flower vases in the lounge, on both side walls */
@@ -2282,9 +2355,11 @@ input[type=range]:focus-visible{outline:2px solid var(--yellow);outline-offset:8
       });
       var naPorta = ex.x > 110 && Math.abs(ex.z - DZ) < 170 && fwx > .55;
       var want = cand ? "st" + cand.num : naPorta ? "LAGOA" : (ex.z < backZ + 470 && Math.abs(ex.x) < 150 && fwz < -.6 ? "YAXUM" : null);
-      if (want && ex.stillT > .35) {
-        if (want !== ex.panel) { ex.panel = want; panel.st = cand || { key: want }; if (panel.cb) panel.cb(panel.st); }
-      } else if (ex.panel && (want !== ex.panel || ex.moveT > .45)) {
+      /* A informação aparece por proximidade, sem clique e sem exigir que a pessoa pare. */
+      var activeWant = want && (!cand || cd < 235) ? want : null;
+      if (activeWant) {
+        if (activeWant !== ex.panel) { ex.panel = activeWant; panel.st = cand || { key: activeWant }; if (panel.cb) panel.cb(panel.st); }
+      } else if (ex.panel && activeWant !== ex.panel) {
         ex.panel = null; panel.st = null; if (panel.cb) panel.cb(null);
       }
       if (ex.panel && panel.st && panel.pos) {
@@ -2369,6 +2444,13 @@ input[type=range]:focus-visible{outline:2px solid var(--yellow);outline-offset:8
       }
       }
       if (!still) {
+        endLogo.position.y = 176 + Math.sin(clock * .82) * 7;
+        endLogo.rotation.y = Math.sin(clock * .46) * .075;
+        endLogo.rotation.z = Math.sin(clock * .31) * .012;
+        endLogoParticles.rotation.z = clock * .032;
+        endLogoParticles.rotation.y = -clock * .018;
+        logoParticleMat.opacity = .62 + Math.sin(clock * 1.7) * .16;
+        halo.material.opacity = .18 + Math.sin(clock * 1.25) * .07;
         scopeTex.offset.x -= .004;
         for (var i = 0; i < anim.holos.length; i++) anim.holos[i].rotation.y += .01;
         var on = (clock % 1.3) < .8; for (var j = 0; j < anim.recs.length; j++) anim.recs[j].visible = on;
@@ -2465,8 +2547,8 @@ input[type=range]:focus-visible{outline:2px solid var(--yellow);outline-offset:8
            eq: ["Bancada ao vivo", "WhatsApp com IA", "Suporte Digital", "App do cliente", "Caixa e estoque"],
            yx: ["30 dias grátis para testar na sua loja.", "Implantação presencial em Florianópolis.", "Fora da Ilha, a implantação é online."] }
     };
-    var card = document.getElementById("exCard"), cardLink = document.getElementById("exLink"), hole = card.querySelector(".ex-hole");
-    var saiTimer = 0, cardW = 0, cardH = 0;
+    var card = document.getElementById("exCard"), cardLink = document.getElementById("exLink"), hole = card.querySelector(".ex-hole"), cardClose = document.getElementById("exClose");
+    var saiTimer = 0, cardW = 0, cardH = 0, currentPanelId = null, dismissedPanelId = null;
     function letras(el, text){
       el.textContent = "";
       text.split(" ").forEach(function(word, wi){
@@ -2503,11 +2585,14 @@ input[type=range]:focus-visible{outline:2px solid var(--yellow);outline-offset:8
     space.onPanel(function(st){
       clearTimeout(saiTimer);
       if (!st) {
+        currentPanelId = null; dismissedPanelId = null;
         if (card.hidden) return;
         card.classList.remove("go"); card.classList.add("sai");
         saiTimer = setTimeout(function(){ card.hidden = true; card.classList.remove("sai"); }, 460);
         return;
       }
+      currentPanelId = st.key === "YAXUM" || st.key === "LAGOA" ? st.key : "st" + st.num;
+      if (dismissedPanelId === currentPanelId) { card.hidden = true; return; }
       var info = INFO[st.key]; if (!info) { card.hidden = true; return; }
       card.classList.remove("go", "sai");
       var nome = st.key === "YAXUM" ? "YAXUM Lab" : st.key === "LAGOA" ? "Lagoa da Conceição" : (st.name.charAt(0) + st.name.slice(1).toLowerCase()).replace(" bga", " BGA");
@@ -2532,6 +2617,13 @@ input[type=range]:focus-visible{outline:2px solid var(--yellow);outline-offset:8
       hole.style.animation = "none"; void hole.offsetWidth; hole.style.animation = "";
       card.hidden = false;
       requestAnimationFrame(lancar);
+    });
+    cardClose.addEventListener("click", function(){
+      if (!currentPanelId || card.hidden) return;
+      dismissedPanelId = currentPanelId;
+      card.classList.remove("go"); card.classList.add("sai");
+      clearTimeout(saiTimer);
+      saiTimer = setTimeout(function(){ card.hidden = true; card.classList.remove("sai"); }, 460);
     });
     cardLink.addEventListener("click", function(e){
       if (cardLink.target === "_blank") return;
